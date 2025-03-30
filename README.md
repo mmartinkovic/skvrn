@@ -13,3 +13,5 @@ Oficiálna webstránka začínajúceho interpreta SKVRN. Moderný responzívny d
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 - ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?logo=bootstrap&logoColor=white)
 - ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-528DD7?logo=fontawesome&logoColor=white)
+
+## TENTO PROJEKT JE HLAVNE PRÁCA DEEPSEEK AI, NEMÁ ODZRKADLOVAŤ MOJE ZNALOSTI A SCHOPNOSTI (aj keď značnej časti kódu rozumiem)!!!
