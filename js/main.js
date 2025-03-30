@@ -117,7 +117,7 @@ const audioPlayer = {
         this.isPlaying = false;
         this.currentTrack = null;
         this.tracks = [
-            { id: 1, title: "Test - Gitara", file: "gitara(test1).wav" }
+            { id: 1, title: "Test - Gitara", file: "gitara-preview.wav" }
         ];
         
         this.setupElements();
