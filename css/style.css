@@ -1,0 +1,567 @@
+:root {
+    --purple: #6f42c1;
+    --dark-bg: #121212;
+    --dark-2: #1e1e1e;
+}
+
+/* Vlastné farby */
+.bg-dark-purple {
+    background-color: #1a103d;
+}
+
+.bg-dark-2 {
+    background-color: var(--dark-2);
+}
+
+.bg-black-gradient {
+    background: linear-gradient(to bottom, var(--dark-bg), #2a0b4a);
+}
+
+.text-purple {
+    color: var(--purple);
+}
+
+.btn-purple {
+    background-color: var(--purple);
+    border-color: var(--purple);
+    color: white;
+}
+
+.btn-outline-purple {
+    border-color: var(--purple);
+    color: var(--purple);
+}
+
+.btn-outline-purple:hover {
+    background-color: var(--purple);
+    color: white;
+}
+
+.border-purple {
+    border-color: var(--purple) !important;
+}
+
+/* Hover efekty */
+.hover-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(111, 66, 193, 0.5);
+}
+
+/* Neon efekty */
+.neon-text {
+    text-shadow: 0 0 5px var(--purple), 0 0 10px var(--purple);
+}
+
+/* Sekcie */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--purple);
+}
+
+/* Instagram Carousel */
+.instagram-link {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2; /* Nad položkou */
+}
+
+.instagram-post {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    transform-origin: center center;
+}
+
+.instagram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(188, 19, 254, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-overlay i {
+    font-size: 2.5rem;
+    color: white;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.instagram-link:hover .instagram-post {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+.instagram-link:hover .instagram-overlay {
+    opacity: 1;
+}
+
+.instagram-link:hover .instagram-overlay i {
+    transform: scale(1.1);
+}
+
+/* Sociálne ikonky */
+.social-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 3;
+}
+
+.spotify-icon {
+    color: #1DB954;
+}
+
+.tiktok-icon {
+    color: #000000;
+}
+
+.instagram-icon {
+    color: #E1306C;
+}
+
+.social-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(188, 19, 254, 0.4);
+}
+
+.social-icon:hover .social-pulse {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.spotify-icon:hover .social-pulse {
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.6);
+}
+
+.tiktok-icon:hover .social-pulse {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+.instagram-icon:hover .social-pulse {
+    box-shadow: 0 0 15px rgba(225, 48, 108, 0.6);
+}
+
+/* Neon text */
+.neon-text {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #bc13fe, 0 0 30px #bc13fe;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #bc13fe, 0 0 30px #bc13fe;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bc13fe, 0 0 40px #bc13fe;
+    }
+}
+
+/* Copyright text */
+.copyright-text {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    display: inline-block;
+}
+
+.copyright-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(188, 19, 254, 0.7), transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.copyright-text:hover::after {
+    transform: scaleX(1);
+}
+
+/* Footer wrapper */
+.footer-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f0a1a 0%, #1a103d 50%, #2a0b4a 100%);
+}
+
+/* Častice efekt */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(188, 19, 254, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(188, 19, 254, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 40% 50%, rgba(111, 66, 193, 0.1) 0%, transparent 30%);
+    z-index: 1;
+}
+
+/* Hlavný obsah footeru */
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animované ohraničenie */
+.footer-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #bc13fe, 
+        #6f42c1, 
+        #bc13fe, 
+        transparent);
+    background-size: 200% 100%;
+    animation: gradientBorder 3s linear infinite;
+}
+
+@keyframes gradientBorder {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
+
+/* Vylepšený carousel */
+.instagram-carousel .item {
+    position: relative; /* Dôležité pre vrstvenie */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center center;
+    margin: 15px 0px;
+}
+
+.instagram-carousel .item:hover {
+    transform: scale(0.95); /* Zoom dovnútra (menej ako 1) */
+    box-shadow: 0 8px 18px rgba(188, 19, 254, 0.5);
+}
+
+.instagram-carousel {
+    padding: 20px 0; /* Pridá priestor pre tieň */
+    margin: -20px 0; /* Kompenzácia padding-u */
+}
+
+.instagram-carousel .item::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    z-index: 1;
+}
+
+.home-section {
+    height: 80vh; /* Základná hodnota */
+    min-height: 600px; /* Absolútne minimum */
+    max-height: 900px; /* Maximálna výška */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Audio Player v navigácii */
+.navbar-player {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+}
+
+.player-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-player {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-player:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.player-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.progress-container {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    margin-top: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--purple);
+    transition: width 0.1s linear;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.btn-volume {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.volume-slider {
+    width: 80px;
+    height: 4px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    outline: none;
+    opacity: 0;
+    transition: opacity 0.3s, width 0.3s;
+}
+
+.volume-control:hover .volume-slider,
+.volume-slider:focus {
+    opacity: 1;
+    width: 100px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--purple);
+    cursor: pointer;
+}
+
+/* Audio vizualizér */
+#audio-visualizer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.7;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* Typing efekt */
+.typing-text {
+    min-height: 60px;
+    display: inline-block;
+}
+
+#typing {
+    border-right: 2px solid var(--purple);
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--purple); }
+}
+
+.home-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Hudobné noty a prvky */
+.music-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.music-note {
+    position: absolute;
+    color: rgba(188, 19, 254, 0.3);
+    font-size: 2rem;
+    animation: float 8s infinite ease-in-out;
+}
+
+.note-1 { top: 20%; left: 10%; animation-delay: 0s; }
+.note-2 { top: 60%; left: 80%; animation-delay: 1s; }
+.note-3 { top: 30%; left: 70%; animation-delay: 2s; }
+.note-4 { top: 70%; left: 20%; animation-delay: 3s; }
+
+.synth-circle, .synth-circle-2 {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(111, 66, 193, 0.2);
+    animation: pulse 12s infinite ease-in-out;
+}
+
+.synth-circle {
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.synth-circle-2 {
+    width: 500px;
+    height: 500px;
+    top: 60%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4s;
+}
+
+/* Vlnové efekty */
+.wave-layer, .wave-layer-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 20%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(111, 66, 193, 0.1)" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+    animation: wave 15s linear infinite;
+    z-index: 1;
+}
+
+.wave-layer-2 {
+    height: 25%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(188, 19, 254, 0.08)" d="M0,256L48,261.3C96,267,192,277,288,266.7C384,256,480,224,576,218.7C672,213,768,235,864,250.7C960,267,1056,277,1152,272C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+    animation: wave 20s linear infinite reverse;
+    opacity: 0.7;
+}
+
+/* Časticový efekt */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.particle-1 { width: 3px; height: 3px; top: 10%; left: 15%; animation-delay: 0s; }
+.particle-2 { width: 2px; height: 2px; top: 65%; left: 75%; animation-delay: 2s; }
+.particle-3 { width: 4px; height: 4px; top: 40%; left: 50%; animation-delay: 4s; }
+
+/* Animácie */
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.4; }
+}
+
+@keyframes wave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsívne úpravy */
+@media (max-width: 768px) {
+    .music-note { font-size: 1.5rem; }
+    .synth-circle { width: 200px; height: 200px; }
+    .synth-circle-2 { width: 300px; height: 300px; }
+}
