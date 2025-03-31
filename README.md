@@ -1,5 +1,5 @@
 # SKVRN - Oficiálna hudobná stránka
-Oficiálna webstránka začínajúceho interpreta SKVRN. Moderný responzívny dizajn s interaktívnymi prvkami pre fanúšikov hudby.
+Oficiálna webstránka začínajúceho interpreta SKVRN. Moderný responzívny dizajn s interaktívnymi prvkami.
 
 ## Funkcie
 - **Galería** - Instagram karusel s najnovšími príspevkami
@@ -12,6 +12,5 @@ Oficiálna webstránka začínajúceho interpreta SKVRN. Moderný responzívny d
 - ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 - ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?logo=bootstrap&logoColor=white)
-- ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-528DD7?logo=fontawesome&logoColor=white)
 
-## TENTO PROJEKT JE HLAVNE PRÁCA DEEPSEEK AI, NEMÁ ODZRKADLOVAŤ MOJE ZNALOSTI A SCHOPNOSTI (aj keď značnej časti kódu rozumiem)!!!
+## TENTO PROJEKT JE PRÁCA POMOCOU AI (aj keď značnej časti kódu rozumiem)!!!
